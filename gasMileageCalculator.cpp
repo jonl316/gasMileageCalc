@@ -51,9 +51,8 @@ int main()
 	cout << fixed << setprecision(2);
 	cout << "You have traveled " << milesTotal << " miles. " << endl;
 	cout <<  "Gallons of gas used " << gallonsOfGas << ". " << endl;
-	cout << "Miles per gallon = " << milesPerGallon << ". " << endl;
+	cout << "Miles per gallon = " << milesPerGallon << ". " << endl << endl;
 
-	cout << "Miles Traveled \t\tGas Used \tMiles per gallon" << endl;
 
 }
 
