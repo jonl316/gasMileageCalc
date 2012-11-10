@@ -1,0 +1,26 @@
+Gas Mileage IPO
+
+Input:
+beginMiles
+endMiles
+gallonsOfGas
+gasPrice
+
+
+
+
+Processing:
+counter // how many times I have filled up with gas
+gasSubTotal
+priceSubTotal
+
+
+Output:
+milesTotal
+gasTotal
+priceTotal
+
+Algorithm:
+1. Prompt the user to enter the beginMiles
+
+
