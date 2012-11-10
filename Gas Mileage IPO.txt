@@ -1,5 +1,7 @@
 Gas Mileage IPO
 
+Program that will calculate the gas mileage by using the miles travelled since the last time we filled the tank.  How much gas was used and the cost.  
+
 Input:
 beginMiles
 endMiles
@@ -11,8 +13,8 @@ gasPrice
 
 Processing:
 counter // how many times I have filled up with gas
-gasSubTotal
-priceSubTotal
+gasSubTotal 	// accumulator
+priceSubTotal 	// accululator
 
 
 Output:
@@ -22,5 +24,9 @@ priceTotal
 
 Algorithm:
 1. Prompt the user to enter the beginMiles
+2. Prompt the user to enter the gallonsOfGas
+3. Prompt the user to enter the gasPrice
+
+
 
 
