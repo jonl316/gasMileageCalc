@@ -8,8 +8,8 @@
  *  filling up at the gas station
  */
 
-#include <iostream>;
-#include <iomanip>;
+#include <iostream>
+#include <iomanip>
 
 using namespace std;
 
