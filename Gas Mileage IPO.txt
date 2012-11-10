@@ -8,24 +8,29 @@ endMiles
 gallonsOfGas
 gasPrice
 
-
-
-
 Processing:
 counter // how many times I have filled up with gas
 gasSubTotal 	// accumulator
 priceSubTotal 	// accululator
 
-
 Output:
 milesTotal
 gasTotal
 priceTotal
+pricePerMile
+pricePerGallon
+averagePricePerGallon
+milesPerGallon
 
 Algorithm:
 1. Prompt the user to enter the beginMiles
+3. Prompt the user to enter the endMiles
 2. Prompt the user to enter the gallonsOfGas
 3. Prompt the user to enter the gasPrice
+4. milesTotal = endMiles - beginMiles	
+5. milesPerGallon = milesTotal / gallonsOfGas
+6. Display milesTotal to the screen
+7. Diaplay milesPerGallon to the screen
 
 
 
