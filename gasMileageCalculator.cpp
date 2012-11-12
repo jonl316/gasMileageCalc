@@ -44,7 +44,7 @@ int main()
 	cin >> gasPrice;
 
 
-	while (another = 'Y')
+	// while (another = 'Y')
 	// Calculate the miles traveled between gas fill ups
 	milesTotal = endMiles - beginMiles;
 
