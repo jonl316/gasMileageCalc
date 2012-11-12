@@ -5,17 +5,14 @@
 
 # Compiled Dynamic libraries
 *.so
-<<<<<<< HEAD
 *.dylib
-=======
->>>>>>> 33f20610731f1f5fe0b2699c8ac071c54bdc1d20
+
 
 # Compiled Static libraries
 *.lai
 *.la
 *.a
-<<<<<<< HEAD
+
 
 Debug/
-=======
->>>>>>> 33f20610731f1f5fe0b2699c8ac071c54bdc1d20
+
