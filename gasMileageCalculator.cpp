@@ -30,7 +30,7 @@ int main()
 	double priceTotal = 0.0; // TODO
 	double pricePerMile = 0.0;
 	double milesPerGallon = 0.0;
-	char another = 'N';
+	char another = 'Y';
 
 
 	// Prompt the user for the initial variables
@@ -44,12 +44,14 @@ int main()
 	cin >> gasPrice;
 
 
-	// while (another = 'Y')
+	while (another == 'Y')
+	{
 	// Calculate the miles traveled between gas fill ups
 	milesTotal = endMiles - beginMiles;
 
 	// Calculate the miles per gallon
 	milesPerGallon = milesTotal / gallonsOfGas;
+	}
 
 	cout << fixed << setprecision(2);
 	cout << "You have traveled " << milesTotal << " miles. " << endl;
