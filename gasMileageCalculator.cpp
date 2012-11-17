@@ -28,36 +28,83 @@ int main()
 	double milesTotal = 0.0;
 	double gasTotal = 0.0; // TODO
 	double priceTotal = 0.0; // TODO
+	double milesSubTotal = 0.0;
 	double pricePerMile = 0.0;
 	double milesPerGallon = 0.0;
-	char another = 'Y';
+	double mpgSubTotal = 0.0;
+	char anotherIndicator = 'Y';
+	char anotherMilesIndicator = 'Y';
 
 
-	// Prompt the user for the initial variables
-	cout << "Please enter the begin miles: " ;
-	cin >> beginMiles;
-	cout << "Please enter the ending miles: ";
-	cin >> endMiles;
-	cout << "Please enter the gas gallons pumped: ";
-	cin >> gallonsOfGas;
-	cout << "Please enter the gas cost: $ ";
-	cin >> gasPrice;
-
-
-	while (another == 'Y')
+	while (anotherIndicator == 'Y')
 	{
-	// Calculate the miles traveled between gas fill ups
-	milesTotal = endMiles - beginMiles;
+		counter++;
+		priceTotal += gasPrice;
+		milesSubTotal += milesTotal;
+		mpgSubTotal += milesPerGallon;
+		// milesTotal = 0.0;
+		cout << "MT: " << milesTotal << endl;
+		cout << "MPG: " << milesPerGallon << endl;
 
-	// Calculate the miles per gallon
-	milesPerGallon = milesTotal / gallonsOfGas;
+
+		// Prompt the user for the initial variables
+		if (counter < 2)
+		{
+			cout << "Please enter the begin miles: " ;
+			cin >> beginMiles;
+			cout << "Please enter the ending miles: ";
+			cin >> endMiles;
+			cout << "Please enter the gas gallons pumped: ";
+			cin >> gallonsOfGas;
+			cout << "Please enter the gas cost: $ ";
+			cin >> gasPrice;
+		}
+		else
+		{
+			cout << "Please enter the begin miles: " << setprecision(0) << endMiles << endl;
+			cout << "Please enter the ending miles: ";
+			cin >> endMiles;
+			cout << "Please enter the gas gallons pumped: ";
+			cin >> gallonsOfGas;
+			cout << "Please enter the gas cost: $ ";
+			cin >> gasPrice;
+		}
+
+
+
+		// Calculate the miles traveled between gas fill ups
+		milesTotal = endMiles - beginMiles;
+
+		// Calculate the miles per gallon
+		milesPerGallon = milesTotal / gallonsOfGas;
+
+		cout << fixed << setprecision(2);
+
+		if (counter < 2 )
+		{
+			cout << "You have traveled " << milesTotal << " miles. " << endl;
+			cout <<  "Gallons of gas used " << gallonsOfGas << ". " << endl;
+			cout << "Miles per gallon = " << milesPerGallon << ". " << endl << endl;
+		}
+		else
+		{
+			cout << "\nYou have entered " << counter << " requests to calculate Miles"<< endl;
+			cout << "You have traveled " << milesTotal << " milesTotal. " << endl;
+			cout << "You have traveled " << milesSubTotal << " milesSubTotal" << endl;
+			cout <<  "Gallons of gas used " << gallonsOfGas << ". " << endl;
+			cout << "Total Gallons used " << gasTotal << ". " << endl;
+			cout << "Miles per gallon = " << milesPerGallon << ". " << endl;
+			cout << "Average Miles per gallon " << mpgSubTotal << ". " << endl << endl;
+		}
+		cout << "Would you like to check another? ";
+		cin >> anotherIndicator;
+		anotherIndicator = toupper(anotherIndicator);
 	}
 
-	cout << fixed << setprecision(2);
-	cout << "You have traveled " << milesTotal << " miles. " << endl;
-	cout <<  "Gallons of gas used " << gallonsOfGas << ". " << endl;
-	cout << "Miles per gallon = " << milesPerGallon << ". " << endl << endl;
 
+	cout << "*** End of Program***" << endl;
+
+	return 0;
 
 }
 
