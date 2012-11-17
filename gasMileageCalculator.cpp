@@ -39,9 +39,6 @@ int main()
 	while (anotherIndicator == 'Y')
 	{
 		counter++;
-		priceTotal += gasPrice;
-		milesSubTotal += milesTotal;
-		mpgSubTotal += milesPerGallon;
 		milesTotal = 0.0;
 		milesPerGallon = 0.0;
 		gallonsOfGas = 0.0;
@@ -98,9 +95,14 @@ int main()
 			cout << "Miles per gallon = " << milesPerGallon << ". " << endl;
 			cout << "Average Miles per gallon " << mpgSubTotal << ". " << endl << endl;
 		}
-		cout << "Would you like to check another? ";
+		cout << "Would you like to check another? (Y for Yes, N for No): ";
 		cin >> anotherIndicator;
 		anotherIndicator = toupper(anotherIndicator);
+
+		// Updated Accumulator Variables
+		mpgSubTotal += milesPerGallon;
+		milesSubTotal += milesTotal;
+		priceTotal += gasPrice;
 	}
 
 
