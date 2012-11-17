@@ -42,10 +42,9 @@ int main()
 		priceTotal += gasPrice;
 		milesSubTotal += milesTotal;
 		mpgSubTotal += milesPerGallon;
-		// milesTotal = 0.0;
-		cout << "MT: " << milesTotal << endl;
-		cout << "MPG: " << milesPerGallon << endl;
-
+		milesTotal = 0.0;
+		milesPerGallon = 0.0;
+		gallonsOfGas = 0.0;
 
 		// Prompt the user for the initial variables
 		if (counter < 2)
@@ -61,7 +60,10 @@ int main()
 		}
 		else
 		{
-			cout << "Please enter the begin miles: " << setprecision(0) << endMiles << endl;
+			beginMiles = endMiles;
+			endMiles = 0.0;
+
+			cout << "Please enter the begin miles: " << setprecision(0) << beginMiles << endl;
 			cout << "Please enter the ending miles: ";
 			cin >> endMiles;
 			cout << "Please enter the gas gallons pumped: ";
